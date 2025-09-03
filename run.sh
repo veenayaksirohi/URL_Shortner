@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd FrontEnd
+npm install    # Ensure dependencies are installed
 npm run dev &     # Start frontend in background, so script continues
 
 cd ../BackEnd
