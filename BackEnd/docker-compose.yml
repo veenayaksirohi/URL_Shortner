@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: data
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      # map container 5432 to host 5433 to avoid conflicts with any host Postgres
+      - "5433:5432"
+
+volumes:
+  db_data:
