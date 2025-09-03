@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [user, setUser] = useState(null);
   const [isLogin, setIsLogin] = useState(true);
-  const [apiUrl, setApiUrl] = useState('http://localhost:3000');
+  const [apiUrl, setApiUrl] = useState('http://210.79.129.154:3000');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [urls, setUrls] = useState([]);
@@ -327,7 +327,7 @@ function App() {
                 type="url"
                 value={apiUrl}
                 onChange={(e) => setApiUrl(e.target.value)}
-                placeholder="http://localhost:3000"
+                placeholder="http://210.79.129.154:3000"
               />
             </div>
           </div>
