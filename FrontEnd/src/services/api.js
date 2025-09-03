@@ -3,7 +3,7 @@ import { getToken, logout, checkTokenExpiration } from '../utils/auth';
 
 // Get API base URL from localStorage or use default
 const getApiBaseUrl = () => {
-  return localStorage.getItem(STORAGE_KEYS.API_BASE_URL) || 'http://localhost:3000';
+  return localStorage.getItem(STORAGE_KEYS.API_BASE_URL) || 'http://210.79.129.154:3000';
 };
 
 // Set API base URL
