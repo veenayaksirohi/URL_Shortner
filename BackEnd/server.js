@@ -34,6 +34,7 @@ app.use('/', router);
 // Centralized error handler (must be after routes)
 app.use(errorHandler);
 
-app.listen(port, () => {
-  logger.info({ port }, `Server listening on http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  logger.info({ port }, `Server listening on http://0.0.0.0:${port}`);
 });
+
