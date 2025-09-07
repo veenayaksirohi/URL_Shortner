@@ -9,8 +9,21 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
-      # map container 5432 to host 5433 to avoid conflicts with any host Postgres
       - "5433:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      PGADMIN_DEFAULT_PASSWORD: your-password
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
 
 volumes:
   db_data:
+  pgadmin_data:
